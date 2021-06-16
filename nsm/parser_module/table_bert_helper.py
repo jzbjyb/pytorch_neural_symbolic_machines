@@ -39,8 +39,8 @@ def get_table_bert_model(config: Dict, use_proxy=False, master=None):
         del model
         model = TableBertProxy(actor_id=master, table_bert_config=tb_config)
 
-    print('Table Bert Config', file=sys.stderr)
-    print(json.dumps(vars(model.config), indent=2), file=sys.stderr)
+    #print('Table Bert Config', file=sys.stderr)
+    #print(json.dumps(vars(model.config), indent=2), file=sys.stderr)
 
     return model
 
