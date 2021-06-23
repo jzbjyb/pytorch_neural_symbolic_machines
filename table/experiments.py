@@ -49,6 +49,7 @@ from docopt import docopt
 from nsm.program_cache import SharedProgramCache
 # from table.bert.data_model import Column
 from table_bert.dataset import Column, Table
+from table_bert import TableBertModel
 
 
 def annotate_example_for_bert(
@@ -495,6 +496,8 @@ def distributed_train(args):
         print(f'load extra config [{extra_config}]', file=sys.stderr)
         extra_config = json.loads(extra_config)
         config.update(extra_config)
+
+    TableBertModel.from_pretrained(config['table_bert_model_or_config'])  # avoid download confict
 
     work_dir = args['--work-dir']
     print(f'work dir [{work_dir}]', file=sys.stderr)
