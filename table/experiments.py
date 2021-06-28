@@ -8,6 +8,7 @@ Usage:
 Options:
     -h --help                               show this screen.
     --cuda                                  use GPU
+    --add_home                              add home path to "table_bert_model_or_config" in the config
     --work-dir=<dir>                        work directory
     --config=<file>                         path to config file
     --extra-config=<str>                    Extra configuration [default: {}]
@@ -661,13 +662,14 @@ def distributed_train(args):
 def test(args):
     use_gpu = args['--cuda']
     model_path = args['--model']
+    add_home = args['--add_home']
 
     extra_config = json.loads(args['--extra-config'])
     if len(extra_config) > 0:
         print(f'load extra config [{extra_config}]', file=sys.stderr)
 
     print(f'loading model [{model_path}] for evaluation', file=sys.stderr)
-    agent = PGAgent.load(model_path, gpu_id=0 if use_gpu else -1, **extra_config).eval()
+    agent = PGAgent.load(model_path, gpu_id=0 if use_gpu else -1, add_home=add_home, **extra_config).eval()
     config = agent.config
 
     test_file = args['--test-file']

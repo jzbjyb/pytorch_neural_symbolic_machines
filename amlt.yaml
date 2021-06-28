@@ -18,8 +18,66 @@ code:
   local_dir: $CONFIG_DIR
 
 jobs:
-- name: MAPO
+- name: tabert_electra_contrastive_concat_quarter_ep3
   sku: G4
   sku_count: 1
   command:
-  - ./exp.sh tabert_roberta_contrastive_ep5 /mnt/root/TaBERT/data/runs/vanilla_tabert_roberta_contrastive_ep5/pytorch_model_epoch04.bin /mnt/root/MAPO
+  - ./exp.sh tabert_electra_contrastive_concat_quarter_ep3
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_electra_contrastive_concat_quarter_ep5_fast/pytorch_model_epoch02.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_roberta_ep5
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_roberta_ep5
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_roberta_ep5/pytorch_model_epoch04.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_2row_ep1
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_2row_ep1
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_2row_ep5/pytorch_model_epoch00.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_2row_ep3
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_2row_ep3
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_2row_ep5/pytorch_model_epoch02.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_electra_2row_ep1
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_electra_2row_ep1
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_electra_2row_ep5/pytorch_model_epoch00.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_electra_2row_ep3
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_electra_2row_ep3
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_electra_2row_ep5/pytorch_model_epoch02.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskvalue_ep5
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskvalue_ep5
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskvalue_ep5/pytorch_model_epoch04.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskvalue_samplevalue_ep5
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskvalue_samplevalue_ep5
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskvalue_samplevalue_ep5/pytorch_model_epoch04.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskvalue_samplevalue_maskusedcolumn_ep5
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskvalue_samplevalue_maskusedcolumn_ep5
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskvalue_samplevalue_maskusedcolumn_ep5/pytorch_model_epoch04.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines

@@ -3,6 +3,8 @@ import math
 import sys
 from collections import OrderedDict
 from typing import Dict, List
+from pathlib import Path
+import os
 
 import torch
 from torch import nn as nn
@@ -571,10 +573,13 @@ class PGAgent(nn.Module):
         torch.save(params, model_path)
 
     @classmethod
-    def load(cls, model_path, gpu_id=-1, default_values_handle=None, **kwargs):
+    def load(cls, model_path, gpu_id=-1, default_values_handle=None, add_home: bool=False, **kwargs):
         device = torch.device("cuda:%d" % gpu_id if gpu_id >= 0 else "cpu")
         params = torch.load(model_path, map_location=lambda storage, loc: storage)
         config = params['config']
+        if add_home:
+            config['table_bert_model_or_config'] = os.path.join(str(Path.home()), config['table_bert_model_or_config'].lstrip('/'))
+            print('change to: ', config['table_bert_model_or_config'])
 
         if default_values_handle:
             default_values_handle(config)
