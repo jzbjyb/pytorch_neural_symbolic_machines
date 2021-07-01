@@ -86,7 +86,7 @@ jobs:
   sku_count: 1
   command:
   - ./exp.sh tabert_totto_maskseparate_ep20
-    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskseparate_ep10/pytorch_model_epoch19.bin
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskseparate_ep20/pytorch_model_epoch19.bin
     /mnt/root/MAPO
 - name: tabert_totto_maskseparate_ep10
   sku: G4
