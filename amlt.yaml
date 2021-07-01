@@ -81,3 +81,66 @@ jobs:
   - ./exp.sh tabert_totto_maskvalue_samplevalue_maskusedcolumn_ep5
     /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskvalue_samplevalue_maskusedcolumn_ep5/pytorch_model_epoch04.bin
     /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskseparate_ep20
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskseparate_ep20
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskseparate_ep10/pytorch_model_epoch19.bin
+    /mnt/root/MAPO
+- name: tabert_totto_maskseparate_ep10
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskseparate_ep10
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskseparate_ep10/pytorch_model_epoch09.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskseparate_ep5
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskseparate_ep5
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskseparate_ep10/pytorch_model_epoch04.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskwhole_ep10
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskwhole_ep10
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskwhole_ep10/pytorch_model_epoch09.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskwhole_ep5
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskwhole_ep5
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskwhole_ep10/pytorch_model_epoch04.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskseparate_nsp_ep10
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskseparate_nsp_ep10
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskseparate_nsp_ep10/pytorch_model_epoch09.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskseparate_nsp_ep5
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskseparate_nsp_ep5
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskseparate_nsp_ep10/pytorch_model_epoch04.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskseparate_contrastive_concat_ep10
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskseparate_contrastive_concat_ep10
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskseparate_contrastive_concat_ep10/pytorch_model_epoch09.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_maskseparate_contrastive_concat_ep5
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_maskseparate_contrastive_concat_ep5
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskseparate_contrastive_concat_ep10/pytorch_model_epoch04.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
