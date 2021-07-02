@@ -228,3 +228,31 @@ jobs:
   - ./exp.sh tabert_totto_maskseparate_bart_table2texttext2table_ep20
     /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_maskseparate_bart_table2texttext2table_ep20/pytorch_model_epoch19.bin
     /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_hardneg_maskseparate_binary_ep20
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_hardneg_maskseparate_binary_ep20
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_hardneg_maskseparate_binary_ep20/pytorch_model_epoch19.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_hardneg_maskseparate_binary_ep10
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_hardneg_maskseparate_binary_ep10
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_hardneg_maskseparate_binary_ep20/pytorch_model_epoch09.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_randneg_maskseparate_binary_ep20
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_randneg_maskseparate_binary_ep20
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_randneg_maskseparate_binary_ep20/pytorch_model_epoch19.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
+- name: tabert_totto_randneg_maskseparate_binary_ep10
+  sku: G4
+  sku_count: 1
+  command:
+  - ./exp.sh tabert_totto_randneg_maskseparate_binary_ep10
+    /mnt/root/TaBERT/data/runs/vanilla_tabert_totto_randneg_maskseparate_binary_ep20/pytorch_model_epoch09.bin
+    /vc_data/users/t-zhjiang/exp/pytorch_neural_symbolic_machines
