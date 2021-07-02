@@ -579,6 +579,7 @@ class PGAgent(nn.Module):
         config = params['config']
         if add_home:
             config['table_bert_model_or_config'] = os.path.join(str(Path.home()), config['table_bert_model_or_config'].lstrip('/'))
+            config['table_bert_model_or_config'] = config['table_bert_model_or_config'].replace('/data/run/', '/data/runs/')  # a typo
             print('change to: ', config['table_bert_model_or_config'])
 
         if default_values_handle:
