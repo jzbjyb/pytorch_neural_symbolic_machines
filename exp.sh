@@ -14,6 +14,9 @@ else
   conda activate tabert
 fi
 
+# wandb
+export WANDB_API_KEY=9caada2c257feff1b6e6a519ad378be3994bc06a
+
 for i in "${!NAMES[@]}"; do
 	name="${NAMES[i]}"
 	mp="${MPS[i]}"
